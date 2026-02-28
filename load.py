@@ -20,7 +20,14 @@ def create_upsert_query():
         %(coin_id)s, %(symbol)s, %(name)s, %(current_price)s, %(market_cap)s,
         %(total_volume)s, %(price_change_24h)s, %(market_cap_rank)s,
         %(volatility_score)s, %(extracted_at)s
-    );
+    )
+    ON CONFLICT (coin_id, extracted_at) DO UPDATE SET
+        current_price   = EXCLUDED.current_price,
+        market_cap      = EXCLUDED.market_cap,
+        total_volume    = EXCLUDED.total_volume,
+        price_change_24h = EXCLUDED.price_change_24h,
+        market_cap_rank = EXCLUDED.market_cap_rank,
+        volatility_score = EXCLUDED.volatility_score;
     """
 
 
