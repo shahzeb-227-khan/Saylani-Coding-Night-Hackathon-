@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+
+# IDE / editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs and data
+logs/
+raw_data/
+
+# Streamlit
+.streamlit/
+
+# Python bytecode caches anywhere
+**/__pycache__/
+

@@ -1,0 +1,13 @@
+# Database
+psycopg2-binary
+
+# API & HTTP
+requests
+
+# ETL Scheduling
+APScheduler
+
+# Dashboard & Visualization
+streamlit
+pandas
+plotly
